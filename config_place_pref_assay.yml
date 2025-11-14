@@ -1,0 +1,143 @@
+# Project definitions (do not edit)
+Task: place_pref_assay
+scorer: JES
+date: Jun13
+multianimalproject: false
+identity:
+
+
+# Project path (change when moving around)
+project_path: 
+  {path of video directory}
+
+
+# Default DeepLabCut engine to use for shuffle creation (either pytorch or tensorflow)
+engine: pytorch
+
+
+# Annotation data set configuration (and individual video cropping parameters)
+video_sets:
+  {file path to each videos}:
+    crop: {individual video cropping parameters: 0, 1280, 0, 720}
+
+bodyparts:
+- left_ear
+- right_ear
+#- mid_head
+- nose
+- left_front
+- right_front
+- left_hind
+- right_hind
+- check_left
+- check_right
+- stripe_left
+- stripe_right
+- tail
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+
+
+# Fraction of video to start/stop when extracting frames for labeling/refinement
+start: 0
+stop: 1
+numframes2pick: 100
+
+
+# Plotting configuration
+skeleton:
+- - left_ear
+  - right_ear
+- - left_ear
+  - nose
+- - right_ear
+  - nose
+- - left_ear
+  - left_front
+- - right_ear
+  - right_front
+- - left_hind
+  - tail
+- - right_hind
+  - tail
+- - left_front
+  - tail
+- - right_front
+  - tail
+
+# - - mid_head
+#   - left_front
+# - - right_ear
+#   - mid_head
+# - - mid_head
+#   - nose
+# - - left_ear
+#   - mid_head
+# - - right_hind
+#   - tail
+# - - mid_head
+#   - tail
+# - - mid_head
+#   - right_front
+skeleton_color: white
+pcutoff: 0.60
+dotsize: 6
+alphavalue: 0.7
+colormap: rainbow
+
+
+# Training,Evaluation and Analysis configuration
+TrainingFraction:
+- 0.95
+iteration: 0
+default_net_type: resnet_50
+default_augmenter: default
+snapshotindex: -1
+detector_snapshotindex: -1
+batch_size: 8
+detector_batch_size: 1
+
+
+# Cropping Parameters (for analysis and outlier frame detection)
+cropping: false
+#if cropping is true for analysis, then set the values here:
+x1: 0
+x2: 640
+y1: 277
+y2: 624
+
+
+# Refinement configuration (parameters from annotation dataset configuration also relevant in this stage)
+corner2move2:
+- 50
+- 50
+move2corner: true
+
+
+# Conversion tables to fine-tune SuperAnimal weights
+SuperAnimalConversionTables:
