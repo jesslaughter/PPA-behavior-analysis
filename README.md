@@ -1,7 +1,7 @@
 # PPA-behavior-analysis
-A reproducible deep-learning pipeline that imports computer vision tracking data of mouse position from video assay, segments regions of interest, and computes region of interest occupancy time during place preference assays conducted with wireless neuromodulation.
+A deep-learning pipeline that imports DeepLabCut (DLC) tracking data of mouse position within videos of place preference assays, segments the visual data into regions of interest (ROI), and computes ROI occupancy time during the behavioral assays.
 
-This repository contains the Python script 'AutoPlacePrefAnalysis_600seconds.py', which processes DeepLabCut (DLC) tracking data to quantify mouse occupancy in 3 visually distinct regions labeled, striped, middle, and checkered regions during a place preference assay. The DLC analysis was conducted with the 'config_place_pref_assay.yaml' file. The analysis uses frame-wise body-part likelihoods to determine mouse position with an adjustable confidence threshold, and enforces logical movement (e.g., mice must pass through the middle region when switching between the two preference zones).
+This repository contains the Python script 'AutoPlacePrefAnalysis_600seconds.py', which processes DLC tracking data to quantify mouse regional occupancy in 3 visually distinct regions labeled, striped, middle, and checkered. The DLC analysis was conducted with the 'config_place_pref_assay.yaml' file. The analysis uses frame-wise body-part likelihoods to determine mouse position and enforces logical movement (e.g., mice must pass through the middle region when switching between the two preference zones).
 
 ## Data Folder Organization
 
@@ -16,7 +16,7 @@ DLC tracking output files should follow: <MouseID>DLC...csv
 
 Corresponding videos should follow: <MouseID>.mp4
 
-(e.g., Mouse1.mp4, Mouse1DLC_resnet50_place_pref_assay.csv):
+(e.g., Mouse1.mp4, Mouse1DLC_resnet50_place_pref_assay.csv).
 
 
 ## System Requirements
